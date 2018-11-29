@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>REST Server Tests</title>
+    <title>REST Server SI Pelayanan Antrian Pasien</title>
 
     <style>
 
@@ -71,43 +71,41 @@
 <body>
 
 <div id="container">
-    <h1>REST Server Tests</h1>
+    <h1>REST Server SI Pelayanan Antrian Puskesmas</h1>
 
     <div id="body">
 
         <h2><a href="<?php echo site_url(); ?>">Home</a></h2>
 
         <p>
-            See the article
-            <a href="http://net.tutsplus.com/tutorials/php/working-with-restful-services-in-codeigniter-2/" target="_blank">
-                http://net.tutsplus.com/tutorials/php/working-with-restful-services-in-codeigniter-2/
+            Lihat Servernya
+            <a href="https://serverpuskesmas.000webhostapp.com/" target="_blank">
+                Server Puskesmas
             </a>
         </p>
 
         <p>
             The master project repository is
-            <a href="https://github.com/chriskacerguis/codeigniter-restserver" target="_blank">
-                https://github.com/chriskacerguis/codeigniter-restserver
+            <a href="https://github.com/fahrul4215/SI-Pelayanan-Antrian-Pasien" target="_blank">
+                fahrul4215/SI-Pelayanan-Antrian-Pasien
             </a>
         </p>
 
         <p>
-            Click on the links to check whether the REST server is working.
+            Link Get Data JSON berdasarkan Controller
         </p>
 
         <ol>
-            <li><a href="<?php echo site_url('api/example/users'); ?>">Users</a> - defaulting to JSON</li>
-            <li><a href="<?php echo site_url('api/example/users/format/csv'); ?>">Users</a> - get it in CSV</li>
-            <li><a href="<?php echo site_url('api/example/users/id/1'); ?>">User #1</a> - defaulting to JSON  (users/id/1)</li>
-            <li><a href="<?php echo site_url('api/example/users/1'); ?>">User #1</a> - defaulting to JSON  (users/1)</li>
-            <li><a href="<?php echo site_url('api/example/users/id/1.xml'); ?>">User #1</a> - get it in XML (users/id/1.xml)</li>
-            <li><a href="<?php echo site_url('api/example/users/id/1/format/xml'); ?>">User #1</a> - get it in XML (users/id/1/format/xml)</li>
-            <li><a href="<?php echo site_url('api/example/users/id/1?format=xml'); ?>">User #1</a> - get it in XML (users/id/1?format=xml)</li>
-            <li><a href="<?php echo site_url('api/example/users/1.xml'); ?>">User #1</a> - get it in XML (users/1.xml)</li>
-            <li><a id="ajax" href="<?php echo site_url('api/example/users/format/json'); ?>">Users</a> - get it in JSON (AJAX request)</li>
-            <li><a href="<?php echo site_url('api/example/users.html'); ?>">Users</a> - get it in HTML (users.html)</li>
-            <li><a href="<?php echo site_url('api/example/users/format/html'); ?>">Users</a> - get it in HTML (users/format/html)</li>
-            <li><a href="<?php echo site_url('api/example/users?format=html'); ?>">Users</a> - get it in HTML (users?format=html)</li>
+            <li><a href="<?php echo site_url('detail_resep'); ?>">Detail Resep</a></li>
+            <li><a href="<?php echo site_url('Dokter'); ?>">Dokter</a></li>
+            <li><a href="<?php echo site_url('Jenis_kartu'); ?>">Jenis Kartu</a></li>
+            <li><a href="<?php echo site_url('Obat'); ?>">Obat</a></li>
+            <li><a href="<?php echo site_url('Pasien'); ?>">Pasien</a></li>
+            <li><a href="<?php echo site_url('Petugas'); ?>">Petugas</a></li>
+            <li><a href="<?php echo site_url('Poli'); ?>">Poli</a></li>
+            <li><a href="<?php echo site_url('Registrasi'); ?>">Registrasi</a></li>
+            <li><a href="<?php echo site_url('RekamMedis'); ?>">Rekam Medis</a></li>
+            <li><a href="<?php echo site_url('Resep'); ?>">Resep</a></li>
         </ol>
 
     </div>

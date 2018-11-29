@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8080/puskesmas/index.php/';
+$config['base_url'] = 'http://localhost:8080/SI_Pelayanan_Antrian_Puskesmas/client/';
+// $config['base_url'] = 'http://localhost:8080/SI_Pelayanan_Antrian_Puskesmas/client/';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,7 @@ $config['base_url'] = 'http://localhost:8080/puskesmas/index.php/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
