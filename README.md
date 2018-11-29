@@ -1,6 +1,6 @@
-# CodeIgniter Rest Server - Tugas Besar Enterprise [Sistem Pelayanan Antrian Pasien]
+# CodeIgniter Rest - Tugas Besar Enterprise [Sistem Pelayanan Antrian Pasien]
 
-Project Tugas Besar Enterprise - Sistem Pelayanan Antrian Pasien [SERVER]
+Project Tugas Besar Enterprise - Sistem Pelayanan Antrian Pasien
 
 ## Requirements
 
