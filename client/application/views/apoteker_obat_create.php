@@ -75,13 +75,7 @@
 
 	<div class="container">
 	  <div class="page-header">
-	  	<h1 class="text-center" style="color: #F8F8FF">Obat</h1>
-	  </div>
-
-	  <div class="text-center">
-	  	<a class="btn btn-success" href="<?php echo base_url('apoteker/obat_create') ?>">
-	  		<font color="white">Tambah Obat</font>
-	  	</a><br><br>
+	  	<h1 class="text-center" style="color: #F8F8FF">Tambah Obat</h1>
 	  </div>
 
 	  <div class="jumbotron" style="background-color: white">
@@ -110,9 +104,6 @@
 
 	<!--Footer handmade(contact)-->
 	<div class="futer">
-		<br><a class="btn btn-primary" href="<?php echo base_url('login') ?>">
-			<font color="white">Logout</font>
-		</a><br>
 
 		<br>
 		<font style="font-family:times new roman; font-size: 15;" class="text-center">

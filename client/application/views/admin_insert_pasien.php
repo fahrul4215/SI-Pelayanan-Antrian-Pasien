@@ -104,10 +104,9 @@
 	  	<br><br>
 	  	<label class="control-label col-sm-2">No HP:</label>
 		<div class="col-sm-10">
-			<input type="text" class="form-control" id="noHp" placeholder="Masukkan noHp Anda" name="noHp">
+			<input type="text" class="form-control" id="noHp" placeholder="Masukkan noHp Anda" name="noHp"><br>
 		</div>
 
-		<br><br>
 		<div class="text-center">
 			<button type="submit" class="btn btn-success">Submit</button>
 			<a class="btn btn-danger" href="<?php echo base_url('admin') ?>">Batal</a>
@@ -121,9 +120,6 @@
 
 	<!--Footer handmade(contact)-->
 	<div class="futer">
-		<br><a class="btn btn-primary" href="<?php echo base_url('login') ?>">
-			<font color="white">Logout</font>
-		</a><br>
 
 		<br>
 		<font style="font-family:times new roman; font-size: 15;" class="text-center">

@@ -17,4 +17,9 @@ class Apoteker extends CI_Controller {
 	{
 		$this->load->view('apoteker_obat_create');
 	}
+
+	public function obat_update()
+	{
+		$this->load->view('apoteker_obat_update');
+	}
 }

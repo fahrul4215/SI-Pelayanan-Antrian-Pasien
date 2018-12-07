@@ -75,59 +75,29 @@
 
 	<div class="container">
 	  <div class="page-header">
-	  	<h1 class="text-center" style="color: #F8F8FF">Apoteker</h1>
+	  	<h1 class="text-center" style="color: #F8F8FF">Update Obat</h1>
 	  </div>
 
-	  <div class="text-center">
-	  	<a class="btn btn-success" href="<?php echo base_url('apoteker/obat') ?>">
-	  		<font color="white">Lihat Obat</font>
-	  	</a><br><br>
+	  <div class="jumbotron" style="background-color: white">
+	  	
+	  	<label class="control-label col-sm-2">Nama:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Obat" name="nama">
+		</div>
+		<br><br>
 
-	  	<div class="jumbotron" style="background-color: white">
-	  		<table class="table table-striped">
-		  	<thead>
-		  		<tr>
-		  			<th>No</th>
-		  			<th>ID_Pasien</th>
-		  			<th>Nama</th>
-		  			<th>Obat</th>
-		  			<th>Aksi</th>
+		<label class="control-label col-sm-2">Stok:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="stok" placeholder="Masukkan Jumlah Stok" name="stok">
+		</div>
+		<br><br>
+		
+		<div class="text-center">
+			<button type="submit" class="btn btn-success">Update</button>
+			<a class="btn btn-danger" href="<?php echo base_url('apoteker/obat') ?>">Batal</a>
+		</div>
 
-		  		</tr>
-		  	</thead>
-		  	<tbody>
-		  		<tr>
-		  			<td>1</td>
-		  			<td>1235</td>
-		  			<td>Nama Pasien</td>
-		  			<td>Paratusin</td>
-		  			<td>
-		  				<a class="btn btn-warning" href="">Sudah</a>
-		  			</td>
-		  		</tr>
-		  		<tr>
-		  			<td>2</td>
-		  			<td>1235</td>
-		  			<td>Nama Pasien</td>
-		  			<td>Sanmol</td>
-		  			<td>
-		  				<a class="btn btn-warning" href="">Sudah</a>
-		  			</td>
-		  		</tr>
-		  		<tr>
-		  			<td>3</td>
-			        <td>1235</td>
-		  			<td>Nama Pasien</td>
-		  			<td>Bodrex</td>
-		  			<td>
-		  				<a class="btn btn-warning" href="">Sudah</a>
-		  			</td>
-			</tbody>
-		</table>
-	  	</div>
-
-	  </div>
-	  <br>
+	  </div><br>
 
 	</div>
 	<br><br><br><br>

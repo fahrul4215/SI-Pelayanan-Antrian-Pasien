@@ -100,7 +100,7 @@
 		  			<td>Parasetamol</td>
 		  			<td>5</td>
 		  			<td>
-		  				<a class="btn btn-primary" href="">Edit</a>
+		  				<a class="btn btn-primary" href="<?php echo base_url('apoteker/obat_update') ?>">Edit</a>
 		  			</td>
 		  		</tr>
 		  		<tr>
@@ -133,9 +133,6 @@
 
 	<!--Footer handmade(contact)-->
 	<div class="futer">
-		<br><a class="btn btn-primary" href="<?php echo base_url('login') ?>">
-			<font color="white">Logout</font>
-		</a><br>
 
 		<br>
 		<font style="font-family:times new roman; font-size: 15;" class="text-center">
