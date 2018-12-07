@@ -130,26 +130,6 @@
 	  </div>
 	  <br>
 	  
-	  <div class="row" style="">
-
-	    <div class="col-md-4">
-	      <div class="thumbnail">
-	        <a>
-	          <div class="caption">
-				<div class="judulfoto">
-	        		Judul
-	        	</div>
-	          	<p>
-					Kategori : <br>
-	            </p>
-	            <button class="btn btn-block">Komentar</button>
-	          </div>
-	        </a>
-
-	      </div>
-	    </div>
-
-	  </div>
 	</div>
 	<br><br><br><br>
 
