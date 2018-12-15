@@ -99,7 +99,6 @@
 							<th>Nama Obat</th>
 							<th>Jenis Obat</th>
 							<th>Stok Obat</th>
-							<th>Jumlah</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>
@@ -107,25 +106,22 @@
 						<?php $no = 1; ?>
 						<?php foreach ($obat as $value): ?>
 							<tr>
-								<input type="hidden" name="id_obat" value="<?= $value->id_obat ?>">
 								<td><?= $no ?></td>
 								<td><?= $value->nama_obat ?></td>
 								<td><?= $value->jenis_obat ?></td>
 								<td><?= $value->jumlah ?></td>
 								<td>
-									<input type="number" class="form-control" name="jumlah" placeholder="Jumlah Obat untuk Pasien">
-								</td>
-								<td>
-									<input type="submit" class="btn btn-primary" name="tambahObat" value="Tambahkan">
+									<input type="submit" class="btn btn-primary" name="tambahObat" value="Tambahkan_id_<?= $value->id_obat ?>">
 								</td>
 							</tr>
-							<?php $no++; ?>
+						<?php $no++; ?>
 						<?php endforeach ?>
 					</tbody>
 				</table>
 			</div>
 		</div>
 		<div class="text-center">
+			<input type="submit" class="btn btn-primary" name="submit" value="Selesai">
 			<a class="btn btn-danger" href="<?php echo base_url('poli') ?>">Kembali</a>
 		</div>
 

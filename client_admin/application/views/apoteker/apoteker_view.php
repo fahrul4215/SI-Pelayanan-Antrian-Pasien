@@ -70,6 +70,7 @@
 	<div class="container">
 		<div class="page-header">
 			<h1 class="text-center" style="color: #F8F8FF">Apoteker</h1>
+			<h3 class="text-danger"><?= $this->session->flashdata('hasil'); ?></h3>
 		</div>
 
 		<div class="text-center">
@@ -101,7 +102,7 @@
 											<?php endforeach ?></td>
 										</ol>
 										<td>
-											<a class="btn btn-warning" href="">Sudah</a>
+											<a class="btn btn-warning" href="<?= base_url('apoteker/sudah_selesai/'.$value->id_resep) ?>">Sudah</a>
 										</td>
 									</tr>
 									<?php $no++; ?>
