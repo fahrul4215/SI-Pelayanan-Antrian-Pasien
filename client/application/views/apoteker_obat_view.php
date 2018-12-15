@@ -56,68 +56,11 @@
 
 	<!--navbar-->
 	<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center" data-offset-top="0">
-<<<<<<< HEAD:client_admin/application/views/apoteker/apoteker_obat_create.php
-		<ul class="nav navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="<?php echo base_url('admin') ?>">Pasien</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="<?php echo base_url('poli') ?>">Poli</a>
-			</li>
-			<li class="nav-item active">
-				<a class="nav-link" href="<?php echo base_url('apoteker') ?>">Apoteker</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Whatsapp</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="<?php echo base_url('login/logout') ?>">Logout</a>
-			</li>
-
-		</ul>
-	</nav>
-
-	<div class="container">
-		<div class="page-header">
-			<h1 class="text-center" style="color: #F8F8FF">Obat</h1>
-			<h3 class="text-danger"><?= $this->session->flashdata('hasil'); ?></h3>
-		</div>
-
-		<div class="jumbotron" style="background-color: white">
-			<?= form_open('apoteker/obat_create'); ?>
-			<label class="control-label col-sm-2">Nama :</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" placeholder="Masukkan Nama Obat" name="nama_obat">
-			</div>
-
-			<label class="control-label col-sm-2">Jumlah Obat :</label>
-			<div class="col-sm-10">
-				<input type="number" class="form-control" placeholder="Masukkan Jumlah Stok" name="jumlah">
-			</div>
-
-			<label class="control-label col-sm-2">Kadaluwarsa :</label>
-			<div class="col-sm-10">
-				<input type="date" class="form-control" placeholder="Masukkan Tanggal Kadaluwarsa" name="exp_date">
-			</div>
-
-			<label class="control-label col-sm-2">Jenis Obat :</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" placeholder="Masukkan Jenis Obat" name="jenis_obat">
-			</div>
-
-			<div class="text-center">
-				<input type="submit" class="btn btn-success" name="submit" value="Tambah">
-				<a class="btn btn-danger" href="<?php echo base_url('apoteker/obat') ?>">Batal</a>
-			</div>
-			<?= form_close(); ?>
-		</div><br>
-
-=======
 	  <ul class="nav navbar-nav">
-	  	<li class="nav-item active">
+	  	<li class="nav-item">
 	      <a class="nav-link" href="<?php echo base_url('admin') ?>">Pasien</a>
 	    </li>
-	    <li class="nav-item">
+	    <li class="nav-item active">
 	      <a class="nav-link" href="<?php echo base_url('apoteker') ?>">Apoteker</a>
 	    </li>
 	    <li class="nav-item">
@@ -132,22 +75,21 @@
 
 	<div class="container">
 	  <div class="page-header">
-	  	<h1 class="text-center" style="color: #F8F8FF">Pasien</h1>
+	  	<h1 class="text-center" style="color: #F8F8FF">Daftar Obat</h1>
 	  </div>
 
 	  <div class="text-center">
-	  	<a class="btn btn-primary" href="<?php echo base_url('admin/tambahPasien') ?>">
-	  		<font color="white">Tambah Pasien</font>
+	  	<a class="btn btn-success" href="<?php echo base_url('apoteker/obat_create') ?>">
+	  		<font color="white">Tambah Obat</font>
 	  	</a><br><br>
 
 	  	<div class="jumbotron" style="background-color: white">
 	  		<table class="table table-striped">
 		  	<thead>
 		  		<tr>
-		  			<th>ID_Pasien</th>
-		  			<th>Nama</th>
-		  			<th>No HP</th>
-		  			<th>Alamat</th>
+		  			<th>no</th>
+		  			<th>Nama Obat</th>
+		  			<th>Stok</th>
 		  			<th>Aksi</th>
 
 		  		</tr>
@@ -155,39 +97,37 @@
 		  	<tbody>
 		  		<tr>
 		  			<td>1</td>
-		  			<td>John</td>
-		  			<td>Doe</td>
-		  			<td>batuk</td>
+		  			<td>Parasetamol</td>
+		  			<td>5</td>
 		  			<td>
-		  				<a class="btn btn-danger" href="">Riwayat</a>
+		  				<a class="btn btn-primary" href="<?php echo base_url('apoteker/obat_update') ?>">Edit</a>
 		  			</td>
 		  		</tr>
 		  		<tr>
 		  			<td>2</td>
-		  			<td>Mary</td>
-		  			<td>Moe</td>
-		  			<td>mary@example.com</td>
+		  			<td>Bodrex</td>
+		  			<td>7</td>
 		  			<td>
-		  				<a class="btn btn-warning" href="">Riwayat</a>
+		  				<a class="btn btn-primary" href="">Edit</a>
 		  			</td>
 		  		</tr>
 		  		<tr>
 		  			<td>3</td>
-			        <td>July</td>
-			        <td>Dooley</td>
-			        <td>july@example.com</td>
+			        <td>Paratusin</td>
+			        <td>8</td>
 			        <td>
-		  				<a class="btn btn-primary" href="">Riwayat</a>
-		  			</td>
-			    </tr>
+		  				<a class="btn btn-primary" href="">Edit</a>
+		  			</td></tr>
 			</tbody>
 		</table>
+
+		<div class="text-center">
+			<a class="btn btn-danger" href="<?php echo base_url('apoteker') ?>">Kembali</a>
+		</div>
 	  	</div>
 
 	  </div>
-	  <br>
-	  
->>>>>>> 59893faaa1667038daa12c9d443525c2112332e6:client/application/views/admin_view.php
+
 	</div>
 	<br><br><br><br>
 
