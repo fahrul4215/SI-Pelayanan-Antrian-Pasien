@@ -15,11 +15,12 @@ class Registrasi extends REST_Controller {
 	
 		$this->db->join('pasien pas', 'pas.id_pasien = r.id_pasien', 'inner');
 		$this->db->join('poli pol', 'pol.id_poli = r.id_poli', 'inner');
+		// $this->db->join('resep res', 'res.id_resep = r.id_resep', 'left');
 		$this->db->where('tanggal', date('Y-m-d'));
 		$this->db->where('status_antrian', 'belum');
 
 		if ($id_registrasi != '') {
-			$this->db->where('id_registrasi', $id_registrasi);
+			$this->db->where('r.id_registrasi', $id_registrasi);
 		}
 
 		$registrasi = $this->db->get('registrasi r')->result();
@@ -32,6 +33,7 @@ class Registrasi extends REST_Controller {
 		$this->db->join('poli p', 'r.id_poli = p.id_poli', 'inner');
 		$this->db->where('r.id_pasien', $id_pasien);
 		$this->db->where('r.tanggal', date('Y-m-d'));
+		$this->db->where('r.status_antrian', 'belum');
 		$registrasi = $this->db->get('registrasi r')->result();
 
 		$array_poli = array();
@@ -40,15 +42,38 @@ class Registrasi extends REST_Controller {
 			$array_poli[] = $r->id_poli;
 		}
 
-		$this->db->where_not_in('id_poli', $array_poli);
+		if (!empty($array_poli)) {
+			$this->db->where_not_in('id_poli', $array_poli);
+		}
+
 		$poliTersisa = $this->db->get('poli')->result();
 		$this->response($poliTersisa, 200);
 	}
 
 	function antrian_get($id_poli) {
-		$this->db->select_max('no_antrian');
-		$this->db->where('id_poli', $id_poli);
-		$registrasi = $this->db->get('registrasi')->result();
+		// $this->db->select_max('r.no_antrian');
+		$this->db->select('r.no_antrian, pas.no_hp');
+		$this->db->join('pasien pas', 'pas.id_pasien = r.id_pasien', 'inner');
+		$this->db->where('r.id_poli', $id_poli);
+		$this->db->where('r.tanggal', date('Y-m-d'));
+		$this->db->where('r.status_antrian', 'belum');
+		$this->db->order_by('r.no_antrian', 'desc');
+		$registrasi = $this->db->get('registrasi r')->result();
+		$this->response($registrasi, 200);
+	}
+
+	function antrianKurangSedikit_get() {
+		$this->db->select('no_antrian');
+		$this->db->join('pasien pas', 'pas.id_pasien = r.id_pasien', 'inner');
+		$this->db->join('poli pol', 'pol.id_poli = r.id_poli', 'inner');
+		$this->db->where('tanggal', date('Y-m-d'));
+		$this->db->where('status_antrian', 'belum');
+
+		if ($id_registrasi != '') {
+			$this->db->where('r.id_registrasi', $id_registrasi);
+		}
+
+		$registrasi = $this->db->get('registrasi r')->result();
 		$this->response($registrasi, 200);
 	}
 
@@ -77,10 +102,9 @@ class Registrasi extends REST_Controller {
 	function index_put() {
 		$id_registrasi = $this->put('id_registrasi');
 		$data = array(
-			'id_registrasi'       => $this->put('id_registrasi'),
-			'nama'      => $this->put('nama'),
-			'id_jurusan'=> $this->put('id_jurusan'),
-			'alamat'    => $this->put('alamat'));
+			'id_resep'		=> $this->put('id_resep'),
+			'status_antrian'=> $this->put('status_antrian') 
+		);
 
 		$this->db->where('id_registrasi', $id_registrasi);
 		$update = $this->db->update('registrasi', $data);

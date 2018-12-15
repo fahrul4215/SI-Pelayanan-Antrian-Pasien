@@ -17,6 +17,8 @@ class User extends CI_Controller {
 
 	public function index()
 	{
+		// echo date('Y-m-d');
+		// die();
 		$this->load->view('user/user_view');
 	}
 

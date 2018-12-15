@@ -41,14 +41,19 @@ class Obat extends REST_Controller {
 	}
 
     // update data obat
-	function index_put() {
+	function index_put($editJumlah = false) {
 		$id_obat = $this->put('id_obat');
-		$data = array(
+
+		if ($editJumlah) {
+			$data = array('jumlah' => $this->put('jumlah'));
+		} else {
+			$data = array(
 			'id_obat'		=> $this->put('id_obat'),
 			'exp_date'		=> $this->put('exp_date'),
 			'jumlah'		=> $this->put('jumlah'),
 			'nama_obat'		=> $this->put('nama_obat'),
 			'jenis_obat'	=> $this->put('jenis_obat'));
+		}
 
 		$this->db->where('id_obat', $id_obat);
 		$update = $this->db->update('obat', $data);
