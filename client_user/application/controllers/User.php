@@ -32,24 +32,25 @@ class User extends CI_Controller {
 			$no_antrian = 0;
 		}
 
+		switch ($this->input->post('id_poli')) {
+			case 1:
+				$no_antrian = $data['poli_umum'][0]->no_antrian + 1; 
+				break;
+			
+			case 2:
+				$no_antrian = $data['poli_gigi'][0]->no_antrian + 1; 
+				break;
+			
+			case 3:
+				$no_antrian = $data['poli_kia'][0]->no_antrian + 1;
+				break;
+			
+			default:
+				$no_antrian = 1;
+				break;
+		}
+
 		if (isset($_POST['daftar'])) {
-			switch ($this->input->post('id_poli')) {
-				case 1:
-					$no_antrian = $data['poli_umum'][0]->no_antrian + 1; 
-					break;
-				
-				case 2:
-					$no_antrian = $data['poli_gigi'][0]->no_antrian + 1; 
-					break;
-				
-				case 3:
-					$no_antrian = $data['poli_kia'][0]->no_antrian + 1;
-					break;
-				
-				default:
-					$no_antrian = 1;
-					break;
-			}
 
 			$data = array(
 				'id_pasien'		=> $this->input->post('id_pasien'),
@@ -82,15 +83,15 @@ class User extends CI_Controller {
 
 		$data['registrasi'] = json_decode($this->curl->simple_get($this->API.'/registrasi'));
 
-		$data['poli_umum'] = json_decode($this->curl->simple_get($this->API.'/registrasi/antrian/1'));
-		$data['poli_gigi'] = json_decode($this->curl->simple_get($this->API.'/registrasi/antrian/2'));
-		$data['poli_kia'] = json_decode($this->curl->simple_get($this->API.'/registrasi/antrian/3'));
-
 		$this->load->view('user/user_daftar', $data);
 	}
 
 	public function antri()
 	{
-		$this->load->view('user/user_antri');
+		$data['poli_umum'] = json_decode($this->curl->simple_get($this->API.'/registrasi/antrian/1'));
+		$data['poli_gigi'] = json_decode($this->curl->simple_get($this->API.'/registrasi/antrian/2'));
+		$data['poli_kia'] = json_decode($this->curl->simple_get($this->API.'/registrasi/antrian/3'));
+
+		$this->load->view('user/user_antri', $data);
 	}
 }

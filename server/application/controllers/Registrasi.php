@@ -62,6 +62,13 @@ class Registrasi extends REST_Controller {
 		$this->response($registrasi, 200);
 	}
 
+	// function getAntrian_get($id_poli) {
+	// 	$this->db->select_max('no_antrian');
+	// 	$this->db->where('id_poli', $id_poli);
+	// 	$registrasi = $this->db->get('registrasi')->result();
+	// 	$this->response($registrasi, 200);
+	// }
+
 	function antrianKurangSedikit_get() {
 		$this->db->select('no_antrian');
 		$this->db->join('pasien pas', 'pas.id_pasien = r.id_pasien', 'inner');

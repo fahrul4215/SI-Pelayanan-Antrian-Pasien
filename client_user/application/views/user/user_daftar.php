@@ -58,7 +58,7 @@
 				<div class="caption judultext">
 					<br><br>
 					<center>Antrian Poli Gigi</center>
-					<center><strong><?=  (!$poli_gigi[0]->no_antrian) ? 0 : $poli_gigi[0]->no_antrian; ?></strong></center>
+					<center><strong><?=  (!$poli_gigi) ? 0 : $poli_gigi[0]->no_antrian; ?></strong></center>
 					<br><br>
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 				<div class="caption judultext">
 					<br><br>
 					<center>Antrian Poli Umum</center>
-					<center><strong><?=  (!$poli_umum[0]->no_antrian) ? 0 : $poli_umum[0]->no_antrian; ?></strong></center>
+					<center><strong><?=  (!$poli_umum) ? 0 : $poli_umum[0]->no_antrian; ?></strong></center>
 					<br><br>
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 				<div class="caption judultext">
 					<br><br>
 					<center>Antrian Poli KIA - KB</center>
-					<center><strong><?=  (!$poli_kia[0]->no_antrian) ? 0 : $poli_kia[0]->no_antrian; ?></strong></center>
+					<center><strong><?=  (!$poli_kia) ? 0 : $poli_kia[0]->no_antrian; ?></strong></center>
 					<br><br>
 				</div>
 			</div>
